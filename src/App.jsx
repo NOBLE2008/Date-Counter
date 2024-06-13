@@ -5,11 +5,17 @@ function App() {
 
   const [count, setCount] = useState(Date.now())
 
+  const [steps, setSteps] = useState(1)
+
   return (
     <div>
       <button>-</button>
-      <p>Steps</p>
-      <button>+</button>
+      <p>Steps: {steps}</p>
+      <button onClick={() => {
+        setSteps((s) => {
+          return s + 1;
+        })
+      }}>+</button>
       <button onClick={() => {
         setCount((c) => {
           return count - 86400000;
