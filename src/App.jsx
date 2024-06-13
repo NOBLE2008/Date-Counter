@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  const [count, setCount] = useState(Date.now())
 
   return (
     <div>
@@ -9,7 +12,12 @@ function App() {
       <button>+</button>
       <button>-</button>
       <p>Count</p>
-      <button>+</button>
+      <button onClick={() => {
+        setCount((c) => {
+          return count + 86400000;
+        })
+      }}>+</button>
+      <p>{count}</p>
     </div>
   )
 }
