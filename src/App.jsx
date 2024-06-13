@@ -10,7 +10,11 @@ function App() {
       <button>-</button>
       <p>Steps</p>
       <button>+</button>
-      <button>-</button>
+      <button onClick={() => {
+        setCount((c) => {
+          return count - 86400000;
+        })
+      }}>-</button>
       <p>Count</p>
       <button onClick={() => {
         setCount((c) => {
