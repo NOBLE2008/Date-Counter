@@ -7,6 +7,9 @@ function App() {
 
   const [steps, setSteps] = useState(1)
 
+  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
   return (
     <div>
       <button onClick={() => {
@@ -31,7 +34,7 @@ function App() {
           return count + (86400000 * steps);
         })
       }}>+</button>
-      <p>{count}</p>
+      <p>{Date.now() > count ? `days ago was ${weekdays[new Date(count).getDay()]}`: ''}{count}</p>
     </div>
   )
 }
