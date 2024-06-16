@@ -34,7 +34,7 @@ function App() {
           return count + (86400000 * steps);
         })
       }}>+</button>
-      <p>{Date.now() > count ? `${Math.floor((Date.now() - count)/86400000)} days ago was ${weekdays[new Date(count).getDay()]}, ${months[new Date(count).getMonth()]} ${new Date(count).getDate()}, ${new Date(count).getFullYear()}`: ''}{count}</p>
+      <p>{Date.now() > count ? `${Math.floor((Date.now() - count)/86400000)} days ago was ${weekdays[new Date(count).getDay()]}, ${months[new Date(count).getMonth()]} ${new Date(count).getDate()}, ${new Date(count).getFullYear()}`: `${Math.floor((Date.now() - count)/86400000)} days till ${weekdays[new Date(count).getDay()]}`}{count}</p>
     </div>
   )
 }
