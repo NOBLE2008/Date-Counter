@@ -9,7 +9,11 @@ function App() {
 
   return (
     <div>
-      <button>-</button>
+      <button onClick={() => {
+        setSteps((s) => {
+          return s - 1;
+        })
+      }}>-</button>
       <p>Steps: {steps}</p>
       <button onClick={() => {
         setSteps((s) => {
